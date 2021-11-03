@@ -1,0 +1,13 @@
+<p>animal works!</p>
+<ul>
+  <li *ngFor="let animal of animaux" > {{ animal.name }}
+    <ul>
+      <li> {{animal.species}} </li>
+      <li> {{animal.veterinarian}} </li>
+      <li> {{animal.comment}} </li>
+      <li> {{animal.email}} </li>
+      <li> {{animal.phoneNumber}} </li>
+    </ul>
+    <button class="delete">Delete</button>
+   </li>
+</ul>

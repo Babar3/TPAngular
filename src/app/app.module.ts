@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { AnimalModule } from './animal/animal.module';
+import { AnimalListModule } from './animal-list/animal-list.module';
+import { SecretMonkeGalleryModule } from './secret-monke-gallery/secret-monke-gallery.module';
+
 
 @NgModule({
   declarations: [
@@ -10,9 +15,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgImageSliderModule,
+    AnimalModule,
+    AnimalListModule,
+    SecretMonkeGalleryModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

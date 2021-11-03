@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnimalListComponent } from './animal-list/animal-list.component';
+import { AnimalComponent } from './animal/animal.component';
+import { SecretMonkeGalleryComponent } from './secret-monke-gallery/secret-monke-gallery.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: AnimalListComponent },
+  { path: 'animals/:id', component: AnimalComponent },
+  { path: 'secretmonkegallery', component: SecretMonkeGalleryComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
