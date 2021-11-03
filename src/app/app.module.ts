@@ -5,13 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { AnimalModule } from './animal/animal.module';
-import { AnimalListModule } from './animal-list/animal-list.module';
 import { SecretMonkeGalleryModule } from './secret-monke-gallery/secret-monke-gallery.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +18,6 @@ import { SecretMonkeGalleryModule } from './secret-monke-gallery/secret-monke-ga
     HttpClientModule,
     NgImageSliderModule,
     AnimalModule,
-    AnimalListModule,
     SecretMonkeGalleryModule
   ],
   providers: [],

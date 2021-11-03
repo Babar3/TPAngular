@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AnimalService } from '../animal.service';
-import { Animal } from '../animal';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AnimalService } from './animal.service';
+import { Animal } from './animal';
 
 @Component({
   selector: 'app-animal',
@@ -8,7 +8,8 @@ import { Animal } from '../animal';
   styleUrls: ['./animal.component.scss']
 })
 export class AnimalComponent implements OnInit {
-
+  @Input() model: Animal;
+  @Output() deletion: EventEmitter<Animal> = new EventEmitter();
 
     animaux :  Animal[];
 
@@ -17,6 +18,9 @@ export class AnimalComponent implements OnInit {
   ngOnInit(): void {
     this.animalService.getAnimals().subscribe((data)=>this.animaux=data)
 
+  }
+  onItemDeletion(): void {
+    this.deletion.emit(this.model);
   }
 
 }

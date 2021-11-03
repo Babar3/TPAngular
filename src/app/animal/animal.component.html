@@ -1,4 +1,3 @@
-<p>animal works!</p>
 <ul>
   <li *ngFor="let animal of animaux" > {{ animal.name }}
     <ul>
@@ -6,8 +5,10 @@
       <li> {{animal.veterinarian}} </li>
       <li> {{animal.comment}} </li>
       <li> {{animal.email}} </li>
-      <li> {{animal.phoneNumber}} </li>
+      <li> {{animal.phoneNumber | phone: "-"}} </li>
     </ul>
-    <button class="delete">Delete</button>
+
+    <button (click)="onItemDeletion()">Suppression</button>
+    <button><a [mailTo]="animal?.email"> Envoyer un mail </a></button>
    </li>
 </ul>

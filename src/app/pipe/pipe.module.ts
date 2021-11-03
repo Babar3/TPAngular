@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AnimalListComponent } from './animal-list.component';
+import { PhonePipe } from './phone.pipe';
 
 
 
 @NgModule({
-  declarations: [AnimalListComponent],
+  declarations: [PhonePipe],
   imports: [
     CommonModule
   ],
   exports: [
-    AnimalListComponent
+    PhonePipe
   ]
 })
-export class AnimalListModule { }
+export class PipeModule { }
