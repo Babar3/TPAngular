@@ -4,7 +4,7 @@ import { AnimalComponent } from './animal/animal.component';
 import { SecretMonkeGalleryComponent } from './secret-monke-gallery/secret-monke-gallery.component';
 
 const routes: Routes = [
-  { path: 'animals/:id', component: AnimalComponent },
+  { path: 'animals', component: AnimalComponent },
   { path: 'secretmonkegallery', component: SecretMonkeGalleryComponent}
 ];
 

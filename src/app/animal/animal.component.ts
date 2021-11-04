@@ -19,8 +19,7 @@ export class AnimalComponent implements OnInit {
     this.animalService.getAnimals().subscribe((data)=>this.animaux=data)
 
   }
-  onItemDeletion(): void {
-    this.deletion.emit(this.model);
-  }
+  onItemDeletion(id): void {
+    this.animalService.delete(id).subscribe();  }
 
 }

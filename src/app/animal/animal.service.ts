@@ -8,12 +8,15 @@ import { Observable } from 'rxjs';
 export class AnimalService {
 
 
-  private url = ' https://my-json-server.typicode.com/Babar3/TPAngular/animals'
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   getAnimals(): Observable<Animal[]> {
-    return this.http.get<Animal[]>(this.url)
+    return this.httpClient.get<Animal[]>('http://localhost:3000/animals')
+  }
+
+  delete(id): Observable<Animal> {
+    return this.httpClient.delete<Animal>(`http://localhost:3000/animals/${id}`);  
   }
 
 

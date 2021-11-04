@@ -8,7 +8,7 @@
       <li> {{animal.phoneNumber | phone: "-"}} </li>
     </ul>
 
-    <button (click)="onItemDeletion()">Suppression</button>
+    <button (click)="onItemDeletion(animal.id)">Suppression</button>
     <button><a [mailTo]="animal?.email"> Envoyer un mail </a></button>
    </li>
 </ul>

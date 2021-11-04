@@ -1,5 +1,5 @@
 export class Animal {
-
+    id?: number
     name: string;
     species: string;
     veterinarian: string;
@@ -7,7 +7,8 @@ export class Animal {
     email: string;
     phoneNumber: string;
 
-    constructor(name, species, veterinarian, comment, email, phoneNumber) {
+    constructor(id, name, species, veterinarian, comment, email, phoneNumber) {
+        this.id = id;
         this.name = name;
         this.species = species;
         this.veterinarian = veterinarian;
